@@ -1,0 +1,14 @@
+[
+    {
+      "uri": "/api/users",
+      "method": "GET",
+      "handler": "users"
+    },
+    {
+      "uri": "/api/users-by-email",
+      "method": "GET",
+      "handler": "users-email"
+    }
+
+]
+

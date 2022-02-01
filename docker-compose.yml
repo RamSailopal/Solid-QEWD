@@ -1,0 +1,32 @@
+#
+#       AUTHOR - Raman Sailopal
+#
+version: "2"
+services:
+ qewd:
+   hostname: qewd
+   image: docker.io/rtweed/qewd-server 
+   networks:
+      - yottanet
+   ports:
+      - 8080:8080
+   mem_limit: 1G
+   volumes:
+      - yottavol:/home/soliddb
+      - "$PWD/QEWDApp:/opt/qewd/mapped"
+ solid:
+   image: docker.io/ramb0/solidserver
+   user: root
+   volumes:
+      - yottavol:/opt/solid/.db
+   ports: 
+      - 8443:8443
+   networks:
+      - yottanet
+#   environment:
+#      - SOLID_SERVER_URI="https://192.168.240.21:8443"
+   entrypoint: [ '/bin/sh', '-c', 'export SOLID_SERVER_URI="https://$SOLIDURL:8443" && cd /opt/solid && ./entrypoint.sh start']
+networks:
+    yottanet:
+volumes:
+    yottavol:
