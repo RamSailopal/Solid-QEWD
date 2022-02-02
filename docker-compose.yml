@@ -23,9 +23,16 @@ services:
       - 8443:8443
    networks:
       - yottanet
-#   environment:
-#      - SOLID_SERVER_URI="https://192.168.240.21:8443"
-   entrypoint: [ '/bin/sh', '-c', 'export SOLID_SERVER_URI="https://$SOLIDURL:8443" && cd /opt/solid && ./entrypoint.sh start']
+   entrypoint: [ '/bin/sh', '-c', 'export SOLID_SERVER_URI="$SOLIDURL" && cd /opt/solid && ./entrypoint.sh start']
+ sync:
+   image: docker.io/everpeace/curl-jq
+   volumes:
+      - $PWD/sync:/home/sync
+      - yottavol:/home/soliddb
+   networks:
+      - yottanet
+   entrypoint: [ '/bin/bash', '-c', '/home/sync/syncproc.sh' ]   
+
 networks:
     yottanet:
 volumes:
