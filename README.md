@@ -30,6 +30,8 @@ https://ipaddressofdockerhost:8080/api/users-by-email
                
 The code for these APIs are in the QEWDApp directory (see the QEWD reference for further information about development with QEWD)
 
+Although the database changes in Solid are synced with QEWD through a separate process in this demonstation, there is a significant potential to write data directly to QEWD from Solid.
+
 
 
 References:
