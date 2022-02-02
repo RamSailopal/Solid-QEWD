@@ -1,0 +1,6 @@
+tasks:
+  - init: |
+      echo 'TODO: build project'
+    command: |
+      export SOLIDURL="https://8443-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up
+
