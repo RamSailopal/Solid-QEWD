@@ -18,17 +18,17 @@ Three containers will then be provisioned:
 
 **QEWD server** - Access via https://ipaddressofdockerhost:8080/qewd-monitor
 
-              Password - **keepThisSecret!**
+Password - **keepThisSecret!**
               
               
 **Sync process** - This runs and checks for any changes on the solid server, syncing any Solid  database changes with QEWD. The process runs two REST apis as a results of any changes:
 
 
-               https://ipaddressofdockerhost:8080/api/users
+https://ipaddressofdockerhost:8080/api/users
                
-               https://ipaddressofdockerhost:8080/api/users-by-email
+https://ipaddressofdockerhost:8080/api/users-by-email
                
-               The code for these APIs are in the QEWDApp directory (see the QEWD reference for further information about development with QEWD)
+The code for these APIs are in the QEWDApp directory (see the QEWD reference for further information about development with QEWD)
 
 
 
