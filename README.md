@@ -38,7 +38,7 @@ Although the database changes in Solid are synced with QEWD through a separate p
 
 2) Navigate to the Qewd monitor and then access **Document Store**. 
  
-3) You should see two new documents **users** and **uswers-by-email** holding the Solid Server registration data.
+3) You should see two new documents **users** and **users-by-email** holding the Solid Server registration data.
 
 
 
