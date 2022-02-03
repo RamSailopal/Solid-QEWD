@@ -34,8 +34,10 @@ Although the database changes in Solid are synced with QEWD through a separate p
 
 # Process
 
-1 Access the Solid Server prototype UI and then create a new account. 
-2) Navigate to the Qewd monitor and then access stored documents. 
+1 Access the Solid Server prototype UI and then **Register for a new pod**.
+
+2) Navigate to the Qewd monitor and then access **Document Store**. 
+ 
 3) You should see two new documents **users** and **uswers-by-email** holding the Solid Server registration data.
 
 
