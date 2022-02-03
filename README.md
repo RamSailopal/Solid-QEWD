@@ -34,7 +34,7 @@ Although the database changes in Solid are synced with QEWD through a separate p
 
 # Process
 
-1 Access the Solid Server prototype UI and then **Register for a new pod**.
+1) Access the Solid Server prototype UI and then **Register to get a new pod**.
 
 2) Navigate to the Qewd monitor and then access **Document Store**. 
  
