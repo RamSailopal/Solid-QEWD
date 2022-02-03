@@ -32,6 +32,12 @@ The code for these APIs are in the QEWDApp directory (see the QEWD reference for
 
 Although the database changes in Solid are synced with QEWD through a separate process in this demonstation, there is a significant potential to write data directly to QEWD from Solid.
 
+# Process
+
+1 Access the Solid Server prototype UI and then create a new account. 
+2) Navigate to the Qewd monitor and then access stored documents. 
+3) You should see two new documents **users** and **uswers-by-email** holding the Solid Server registration data.
+
 
 
 # References:
