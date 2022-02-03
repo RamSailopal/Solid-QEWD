@@ -38,4 +38,4 @@ Although the database changes in Solid are synced with QEWD through a separate p
 
 QEWD - https://www.qewdjs.com/
 
-Solid-server - https://github.com/solid
+Solid-server - https://solidproject.org/
