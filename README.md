@@ -30,11 +30,11 @@ https://ipaddressofdockerhost:8080/api/users-by-email
                
 The code for these APIs are in the QEWDApp directory (see the QEWD reference for further information about development with QEWD)
 
-Although the database changes in Solid are synced with QEWD through a separate process in this demonstation, there is a significant potential to write data directly to QEWD from Solid.
+Although the database changes in Solid are synced with QEWD through a separate process in this demonstation, there is significant potential to write data directly to QEWD from Solid.
 
 # Process
 
-1) Access the Solid Server prototype UI and then **Register to get a new pod**.
+1) Access the Solid Server prototype UI and then **Register to get a new pod**, filling out and saving the details.
 
 2) Navigate to the Qewd monitor and then access **Document Store**. 
  
