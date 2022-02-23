@@ -3,17 +3,30 @@
 #
 version: "2"
 services:
- qewd:
-   hostname: qewd
-   image: docker.io/rtweed/qewd-server 
+ yottadb:
+   hostname: yottadb
+   container_name: yottadb
+   image: docker.io/ramb0/yottadb-gateway
    networks:
       - yottanet
    ports:
-      - 8080:8080
+      - 7041:7041
    mem_limit: 1G
+
+
+ node:
+   image: docker.io/ramb0/yottadb-nodejs-client
+   hostname: node
+   container_name: node
    volumes:
-      - yottavol:/home/soliddb
-      - "$PWD/QEWDApp:/opt/qewd/mapped"
+     - yottavol:/home/soliddb
+     - "$PWD/QEWDApp:/home/node"
+     - "$PWD/sync:/home/sync"
+   entrypoint: [ "/bin/bash", "-c", "cd /home/node && yarn add mg-dbx && /home/sync/syncproc.sh" ]
+   networks:
+      - yottanet
+
+
  solid:
    image: docker.io/ramb0/solidserver
    user: root
@@ -23,15 +36,7 @@ services:
       - 8443:8443
    networks:
       - yottanet
-   entrypoint: [ '/bin/sh', '-c', 'export SOLID_SERVER_URI="$SOLIDURL" && cd /opt/solid && ./entrypoint.sh start']
- sync:
-   image: docker.io/everpeace/curl-jq
-   volumes:
-      - $PWD/sync:/home/sync
-      - yottavol:/home/soliddb
-   networks:
-      - yottanet
-   entrypoint: [ '/bin/bash', '-c', '/home/sync/syncproc.sh' ]   
+   entrypoint: [ '/bin/sh', '-c', 'export SOLID_REDIRECT_HTTP_FROM=80 && export SOLID_SERVER_URI="$SOLIDURL" && cd /opt/solid && ./entrypoint.sh start']
 
 networks:
     yottanet:
