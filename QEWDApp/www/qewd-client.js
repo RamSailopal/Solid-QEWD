@@ -1,1 +1,0 @@
-/opt/qewd/www/qewd-client.js
