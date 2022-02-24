@@ -5,38 +5,36 @@ version: "2"
 services:
  yottadb:
    hostname: yottadb
-   container_name: yottadb
-   image: docker.io/ramb0/yottadb-gateway
+   image: ramb0/yotta-mgweb:latest
    networks:
       - yottanet
    ports:
-      - 7041:7041
+      - 8080:8080
+      - 8001:8001
+      - 7042:7042
    mem_limit: 1G
+   volumes:
+      - "$PWD/mapped:/opt/mgweb/mapped"
+      - "$PWD/entrypoint:/home/entrypoint"
+   environment:
+      - glbviewport=8001
+      - glbviewadd=$glbviewadd
+      - ydb_gbldir=/opt/yottadb/yottadb.gld
+   entrypoint: /home/entrypoint/entrypoint.sh
 
 
  node:
-   image: docker.io/ramb0/yottadb-nodejs-client
+   image: docker.io/ubuntu
    hostname: node
    container_name: node
    volumes:
      - yottavol:/home/soliddb
      - "$PWD/QEWDApp:/home/node"
      - "$PWD/sync:/home/sync"
-   entrypoint: [ "/bin/bash", "-c", "cd /home/node && yarn add mg-dbx && /home/sync/syncproc.sh" ]
+   entrypoint: [ "/bin/bash", "-c", "export DEBIAN_FRONTEND=noninteractive && cd /home/node && apt-get update && apt-get install -y nodejs gcc make g++ npm && npm install mg-dbx && npm install @frogcat/ttl2jsonld && tail -f /dev/null" ]
    networks:
       - yottanet
 
-
- solid:
-   image: docker.io/ramb0/solidserver
-   user: root
-   volumes:
-      - yottavol:/opt/solid/.db
-   ports: 
-      - 8443:8443
-   networks:
-      - yottanet
-   entrypoint: [ '/bin/sh', '-c', 'export SOLID_REDIRECT_HTTP_FROM=80 && export SOLID_SERVER_URI="$SOLIDURL" && cd /opt/solid && ./entrypoint.sh start']
 
 networks:
     yottanet:
