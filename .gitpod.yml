@@ -1,6 +1,6 @@
 tasks:
   - name: Docker-Compose
-    command: export glbviewadd="https://8001-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up && gp sync-done prev
+    command: export glbviewadd="https://8001-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up -d && gp sync-done prev
     
   - name: YottaDB-Terminal
     command: gp sync-await prev && docker exec -it yottadb ydb
