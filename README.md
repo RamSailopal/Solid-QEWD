@@ -4,9 +4,9 @@ A proof of concepr showing the potential of YottaDB as a backend store for solid
 JSON
 Since solid-server stores data in the file system as JSON files . The key/value nature of both JSON and YottaDB brings synergies this repo shows the cross compatibility potential of both approaches
 
-A public Solid service set of containers is referenced to and then the truple representation of the containers converted to JSON-LD before being stored in YottaDB.
+A public Solid service set of pod data is referenced to and then the truple representation of the pod converted to JSON-LD before being stored in YottaDB.
 
-Public Solid service: https://rsailopal.inrupt.net
+Public Solid service pod example: https://rsailopal.inrupt.net
 
  # Gitpod Demo
  
