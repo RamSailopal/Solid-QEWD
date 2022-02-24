@@ -19,6 +19,17 @@ Public Solid service: https://rsailopal.inrupt.net
 This will parse rest api data returned as turtle syntax into JSON-ld and then store the data in YottaDB. 
 
 4) In the second window a global listing will show the entries in a global **SOLID**
+
+     YDB>D ^%G
+
+     Output device: <terminal>: 
+
+     List ^SOLID
+     ^SOLID("rsailopal.inrupt.net","@context",0)="/#"
+     ^SOLID("rsailopal.inrupt.net","@context","Test")="/Test/"
+     ^SOLID("rsailopal.inrupt.net","@context","c")="/profile/card#"
+     ^SOLID("rsailopal.inrupt.net","@context","dct")="http://purl.org/dc/terms/"
+
 5) This global is data is then presented as REST API endpoint, presenting the data as JSON-ld. This can be seen by navigating to:
 
    https://8080-gitpod-workspace-address/api/jsonld/rsailopal.inrupt.net
@@ -30,7 +41,7 @@ This will parse rest api data returned as turtle syntax into JSON-ld and then st
    Replace ramsailopal-solidqewd-jm0c6kdhurr.ws-eu33.gitpod.io for the address of the gitpod workspace you are running.
 
 
-References:
+# References:
 
 YottaDB - https://yottadb.com/
 
