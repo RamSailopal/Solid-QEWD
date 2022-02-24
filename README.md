@@ -1,4 +1,4 @@
-# Solid-QEWD
+# Solid-YottaDB
 
 A proof of concepr showing the potential of YottaDB as a backend store for solid server
 JSON
