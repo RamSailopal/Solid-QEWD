@@ -1,4 +1,4 @@
-jsonlp(req)
+jsonld(req)
  new res,user
  set user=$get(req("params","user"))
  if user="" do  QUIT $$errorResponse^%zmgweb(.errors)

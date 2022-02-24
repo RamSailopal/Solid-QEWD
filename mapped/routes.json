@@ -1,8 +1,8 @@
 [
       {
-        "uri": "/api/jsonlp/:user",
+        "uri": "/api/jsonld/:user",
         "method": "GET",
-        "handler": "jsonlp^myRestAPIs"
+        "handler": "jsonld^myRestAPIs"
       },
 
 
