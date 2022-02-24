@@ -43,7 +43,7 @@ This will parse rest api data returned as turtle syntax into JSON-ld and then st
    
    https://8080-ramsailopal-solidqewd-jm0c6kdhurr.ws-eu33.gitpod.io/api/jsonld/rsailopal.inrupt.net
    
-   Replace ramsailopal-solidqewd-jm0c6kdhurr.ws-eu33.gitpod.io for the address of the gitpod workspace you are running.
+   Replace **ramsailopal-solidqewd-jm0c6kdhurr.ws-eu33.gitpod.io** for the address of the gitpod workspace you are running.
 
 
 # References:
