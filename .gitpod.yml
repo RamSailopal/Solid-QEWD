@@ -7,6 +7,6 @@ tasks:
     openMode: split-right
 
   - name: node-Terminal
-    command: gp sync-await prev && docker exec -it node /bin/bash -c "cd /home/node && bash"
+    command: gp sync-await prev && docker exec -it node /bin/bash -c "sleep 120 && cd /home/node && bash"
     openMode: split-right
 
