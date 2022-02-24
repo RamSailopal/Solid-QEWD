@@ -1,11 +1,11 @@
 # Solid-QEWD
 
-A proof of concepr showing the potential of QEWD as a backend store for solid server
-
-Since solid-server stores data in the file system as JSON files and QEWD stores data in IRIS/YottaDB/Cache/Gtm database globals, this repo shows the cross compatibility potential of both approaches
+A proof of concepr showing the potential of YottaDB as a backend store for solid server
+JSON
+Since solid-server stores data in the file system as JSON files . The key/value nature of both JSON and YottaDB brings synergies this repo shows the cross compatibility potential of both approaches
 
 References:
 
-QEWD - https://www.qewdjs.com/
+YottaDB - https://yottadb.com/
 
 Solid-server - https://github.com/solid
