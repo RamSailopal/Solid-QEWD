@@ -1,6 +1,12 @@
 tasks:
-  - init: |
-      echo 'TODO: build project'
-    command: |
-      export glbviewadd="https://8001-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up
+  - name: Docker-Compose
+    command: export glbviewadd="https://8001-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up && && gp sync-done prev
+    
+  - name: YottaDB-Terminal
+    command: gp sync-await prev && docker exec -it yottadb ydb
+    openMode: split-right
+
+  - name: node-Terminal
+    command: gp sync-await prev && docker exec -it node /bin/bash -c "cd /home/node && bash"
+    openMode: split-right
 
