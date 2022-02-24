@@ -1,0 +1,10 @@
+[
+      {
+        "uri": "/api/jsonlp/:user",
+        "method": "GET",
+        "handler": "jsonlp^myRestAPIs"
+      },
+
+
+
+]
