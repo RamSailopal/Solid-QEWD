@@ -2,5 +2,5 @@ tasks:
   - init: |
       echo 'TODO: build project'
     command: |
-      export SOLIDURL="https://8443-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up
+      export glbviewadd="https://8001-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up
 
