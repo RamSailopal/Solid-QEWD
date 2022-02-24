@@ -20,7 +20,9 @@ This will parse rest api data returned as turtle syntax into JSON-ld and then st
 
 4) In the second window a global listing will show the entries in a global **SOLID**
 5) This global is data is then presented as REST API endpoint, presenting the data as JSON-ld. This can be seen by navigating to:
+
    8080-gitpod-workspace-address
+   
    e.g.:
    
    8080-
