@@ -20,19 +20,19 @@ This will parse rest api data returned as turtle syntax into JSON-ld and then st
 
 4) In the second window a global listing will show the entries in a global **SOLID**
 
-      YDB>D ^%G
+        YDB>D ^%G
 
-      Output device: \<terminal\>: 
+        Output device: \<terminal\>: 
 
-      List ^SOLID
+        List ^SOLID
      
-      ^SOLID("rsailopal.inrupt.net","@context",0)="/#"
+        ^SOLID("rsailopal.inrupt.net","@context",0)="/#"
      
-      ^SOLID("rsailopal.inrupt.net","@context","Test")="/Test/"
+        ^SOLID("rsailopal.inrupt.net","@context","Test")="/Test/"
      
-      ^SOLID("rsailopal.inrupt.net","@context","c")="/profile/card#"
+        ^SOLID("rsailopal.inrupt.net","@context","c")="/profile/card#"
      
-      ^SOLID("rsailopal.inrupt.net","@context","dct")="http://purl.org/dc/terms/"
+        ^SOLID("rsailopal.inrupt.net","@context","dct")="http://purl.org/dc/terms/"
      
 
 5) This global is data is then presented as REST API endpoint, presenting the data as JSON-ld. This can be seen by navigating to:
