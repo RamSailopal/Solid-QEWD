@@ -22,7 +22,7 @@ This will parse rest api data returned as turtle syntax into JSON-ld and then st
 
         YDB>D ^%G
 
-        Output device: \<terminal\>: 
+        Output device: <terminal>: 
 
         List ^SOLID
      
