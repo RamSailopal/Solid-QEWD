@@ -5,6 +5,7 @@ version: "2"
 services:
  yottadb:
    hostname: yottadb
+   container_name: yottadb
    image: ramb0/yotta-mgweb:latest
    networks:
       - yottanet
