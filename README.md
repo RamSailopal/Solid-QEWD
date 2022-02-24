@@ -14,7 +14,7 @@ Public Solid service: https://rsailopal.inrupt.net
 2) Log into the account
 3) Open a new browser tab and add **gitpod.io/#https://github.com/RamSailopal/Solid-QEWD/tree/noqewd** to the address - This will create a new Gitpod cloud instance and display three terminal windows. The second will be a YottaDB environment and then third a nodejs environment. Wait for a prompt to appear in the third window and then run:
 
-       node turtparse.js https://rsailopal.inrupt.net
+       node turtparse.js rsailopal.inrupt.net
     
 This will parse rest api data returned as turtle syntax into JSON-ld and then store the data in YottaDB. 
 
