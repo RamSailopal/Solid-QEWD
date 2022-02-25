@@ -18,6 +18,9 @@ var request = https.request(options, function (res) {
         var db = new dbx();
         var open = db.open({ type: "YottaDB", host: "yottadb", tcp_port: 7042, });
         var solid = db.mglobal("SOLID");
+        if (solid.defined(process.argv[2]) != 0) {
+           solid.delete(process.argv[2]);
+        }
         const jsonld = ttl2jsonld(data);
         const jsonld1=JSON.stringify(jsonld,null,2)
         console.log(jsonld1);
