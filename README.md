@@ -1,10 +1,12 @@
 # Solid-YottaDB
 
-A proof of concepr showing the potential of YottaDB as a backend store for solid server
-JSON
-Since solid-server stores data in the file system as JSON files . The key/value nature of both JSON and YottaDB brings synergies this repo shows the cross compatibility potential of both approaches
+![Alt text](solid-yotta.webp?raw=true "Solid YottaDB")
 
-A public Solid service set of pod data is referenced to and then the truple representation of the pod converted to JSON-LD before being stored in YottaDB.
+A proof of concept showing the potential of YottaDB as a backend store for solid server
+
+Since solid-server stores data in the file system as JSON files . The key/value nature of both JSON and YottaDB brings synergies and this repo shows the cross compatibility potential of both approaches
+
+A public Solid service, set of pod data is referenced to and then the truple representation of the pod converted to JSON-LD before being stored in YottaDB.
 
 Public Solid service pod example: https://rsailopal.inrupt.net
 
@@ -12,7 +14,7 @@ Public Solid service pod example: https://rsailopal.inrupt.net
  
 1) Create a free/paid Gitpod account - https://www.gitpod.io/
 2) Log into the account
-3) Open a new browser tab and add **gitpod.io/#https://github.com/RamSailopal/Solid-QEWD/tree/noqewd** to the address - This will create a new Gitpod cloud instance and display three terminal windows. The second will be a YottaDB environment and then third a nodejs environment. Wait for a prompt to appear in the third window and then run:
+3) Open a new browser tab and add **gitpod.io/#https://github.com/RamSailopal/Solid-QEWD/tree/noqewd** to the address - This will create a new Gitpod cloud instance and display three terminal windows. The second will be a YottaDB environment and then third a nodejs environment. Wait for a prompt to appear in the third window the following script will run.:
 
        node turtparse.js rsailopal.inrupt.net
     
