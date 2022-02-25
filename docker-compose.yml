@@ -32,7 +32,7 @@ services:
      - yottavol:/home/soliddb
      - "$PWD/QEWDApp:/home/node"
      - "$PWD/sync:/home/sync"
-   entrypoint: [ "/bin/bash", "-c", "export DEBIAN_FRONTEND=noninteractive && cd /home/node && apt-get update && apt-get install -y nodejs gcc make g++ npm && npm install mg-dbx && npm install @frogcat/ttl2jsonld && tail -f /dev/null" ]
+   entrypoint: [ "/bin/bash", "-c", "export DEBIAN_FRONTEND=noninteractive && cd /home/node && apt-get update && apt-get install -y nodejs gcc make g++ npm && npm install mg-dbx && npm install @frogcat/ttl2jsonld && node turtparse.js rsailopal.inrupt.net && tail -f /dev/null" ]
    networks:
       - yottanet
 
