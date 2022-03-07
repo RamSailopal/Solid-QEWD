@@ -14,9 +14,17 @@ Public Solid service pod example: https://rsailopal.inrupt.net
  
 1) Create a free/paid Gitpod account - https://www.gitpod.io/
 2) Log into the account
-3) Open a new browser tab and add **gitpod.io/#https://github.com/RamSailopal/Solid-QEWD/tree/noqewd** to the address - This will create a new Gitpod cloud instance and display three terminal windows. The second will be a YottaDB environment and then third a nodejs environment. Wait for a prompt to appear in the third window the following script will run.:
+3) Open a new browser tab and add **gitpod.io/#https://github.com/RamSailopal/Solid-QEWD/tree/noqewd** to the address - This will create a new Gitpod cloud instance and display three terminal windows. The second will be a YottaDB environment and then third a nodejs environment. Wait for the containers to load.
 
-       node turtparse.js rsailopal.inrupt.net
+Open a new browser tab and navigate to:
+
+https://3002-gitpod-workspace-address?pod=rsailopal.inrupt.net
+
+e.g.:
+   
+https://8080-ramsailopal-solidqewd-jm0c6kdhurr.ws-eu33.gitpod.io?pod=rsailopal.inrupt.net
+   
+Replace **ramsailopal-solidqewd-jm0c6kdhurr.ws-eu33.gitpod.io** for the address of the gitpod workspace you are running.
     
 This will parse rest api data returned as turtle syntax into JSON-ld and then store the data in YottaDB. 
 
