@@ -28,9 +28,11 @@ services:
    image: docker.io/ubuntu
    hostname: node
    container_name: node
+   ports:
+      - 3002:3000
    volumes:
      - "$PWD/QEWDApp:/home/node"
-   entrypoint: [ "/bin/bash", "-c", "export DEBIAN_FRONTEND=noninteractive && cd /home/node && apt-get update && apt-get install -y nodejs gcc make g++ npm && npm install mg-dbx && npm install @frogcat/ttl2jsonld && node turtparse.js rsailopal.inrupt.net && tail -f /dev/null" ]
+   entrypoint: [ "/bin/bash", "-c", "export DEBIAN_FRONTEND=noninteractive && cd /home/node && apt-get update && apt-get install -y nodejs gcc make g++ npm && npm install mg-dbx @frogcat/ttl2jsonld express url && node index.js" ]
    networks:
       - yottanet
 
